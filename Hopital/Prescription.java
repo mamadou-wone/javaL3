@@ -4,10 +4,12 @@ public class Prescription {
     private int nbPrises;
     private ArrayList<Medicament> medicaments = new ArrayList<Medicament>();
     private Consultation consultation;
+    private Patient patient;
 
     public int getNbPrises() {
         return nbPrises;
     }
+
     public void setNbPrises(int nbPrises) {
         this.nbPrises = nbPrises;
     }
@@ -26,5 +28,9 @@ public class Prescription {
 
     public void setConsultation(Consultation consultation) {
         this.consultation = consultation;
+    }
+
+    public Patient getPatient() {
+        return patient;
     }
 }

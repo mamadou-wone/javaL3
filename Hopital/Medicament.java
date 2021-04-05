@@ -17,7 +17,14 @@ public class Medicament {
         } catch (Exception e) {
             e.printStackTrace();
         }
-      
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getLibelle() {
+        return libelle;
     }
 
 

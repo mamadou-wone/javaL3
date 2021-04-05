@@ -5,15 +5,15 @@ public class Patient {
     private String nom;
     private ArrayList<Consultation> consultations = new ArrayList<Consultation>();
     public static ArrayList<Integer> allID = new ArrayList<Integer>();
-    
-    public Patient(int noPatient, String nom){
-        
+
+    public Patient(int noPatient, String nom) {
+
         try {
-            if(!allID.contains(noPatient)){
+            if (!allID.contains(noPatient)) {
                 allID.add(noPatient);
                 this.noPatient = noPatient;
                 this.nom = nom;
-            }else{
+            } else {
                 System.out.println("Les identifiants des patients doivent être unique");
             }
         } catch (Exception e) {

@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 //   ___       __   ________  ________   _______      
 //  |\  \     |\  \|\   __  \|\   ___  \|\  ___ \     
@@ -8,9 +9,7 @@ import java.time.LocalDate;
 //     \ \____________\ \_______\ \__\\ \__\ \_______\
 //      \|____________|\|_______|\|__| \|__|\|_______|
 
-
-
-public class Main{
+public class Main {
     public static void main(String[] args) {
         Medicament medicament1 = new Medicament("XFO874", "Paracetamol");
         Medicament medicament2 = new Medicament("RFO874", "Acide acétylsalicylique");
@@ -46,6 +45,34 @@ public class Main{
         Medecin medecin3 = new Medecin("7493265", "Fatou Kine NDIAYE");
         Medecin medecin4 = new Medecin("8493265", "Mouhamed TOURE");
 
+        // Prescription prescription1 = new Prescription();
+        // Prescription prescription = new Prescription();
+        consultation1.setMedecin(medecin1);
+        consultation1.setPatient(patient1);
 
+        consultation2.setMedecin(medecin2);
+        consultation2.setPatient(patient2);
+
+        medecin1.makeConsultation(consultation1, patient1);
+
+        Medicament medoc[] = { medicament1, medicament2 };
+        medecin2.makeConsultation(consultation2, patient2);
+
+        medecin1.makePrescription(consultation1, medoc, 2);
+        medecin2.makePrescription(consultation2, medoc, 3);
+        Manager manager = new Manager();
+        manager.getPrescription(patient1);
+        // System.out.println(Medecin.allPrescription);
+        // consultation6.getPrescription();
+        // System.out.println(Medecin.allPrescription);
+
+        // for (Medicament medocs : prescription1.getMedicaments()) {
+        // System.out.println(medocs.getLibelle());
+
+        // }
+
+        // for (Consultation consultation : patient1.getConsultations()) {
+        // System.out.println(consultation.getMedecin());
+        // }
     }
 }
