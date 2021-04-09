@@ -20,7 +20,7 @@ public class Medecin {
                 this.matricule = matricule;
                 this.nom = nom;
             } else {
-                System.out.println("Les identifiants des patients doivent être unique");
+                System.out.println("Les identifiants des médecins doivent être unique");
             }
         } catch (Exception e) {
             e.printStackTrace();

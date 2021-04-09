@@ -45,23 +45,32 @@ public class Main {
         Medecin medecin3 = new Medecin("7493265", "Fatou Kine NDIAYE");
         Medecin medecin4 = new Medecin("8493265", "Mouhamed TOURE");
 
-        // Prescription prescription1 = new Prescription();
-        // Prescription prescription = new Prescription();
         consultation1.setMedecin(medecin1);
         consultation1.setPatient(patient1);
 
         consultation2.setMedecin(medecin2);
         consultation2.setPatient(patient2);
 
+        consultation3.setMedecin(medecin3);
+        consultation3.setPatient(patient1);
+
         medecin1.makeConsultation(consultation1, patient1);
+        medecin3.makeConsultation(consultation3, patient1);
 
         Medicament medoc[] = { medicament1, medicament2 };
+        Medicament medoc2[] = { medicament7, medicament8 };
+        Medicament medoc3[] = { medicament4, medicament6, medicament1 };
+
         medecin2.makeConsultation(consultation2, patient2);
 
         medecin1.makePrescription(consultation1, medoc, 2);
-        medecin2.makePrescription(consultation2, medoc, 3);
+        medecin2.makePrescription(consultation2, medoc2, 3);
+        medecin3.makePrescription(consultation3, medoc3, 3);
+
         Manager manager = new Manager();
-        manager.getPrescription(patient1);
+        // System.out.println(patient1.getConsultations());
+        manager.getPrescription(patient2);
+        // manager.getPrescription(patient1);
         // System.out.println(Medecin.allPrescription);
         // consultation6.getPrescription();
         // System.out.println(Medecin.allPrescription);

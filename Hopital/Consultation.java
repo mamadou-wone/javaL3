@@ -23,7 +23,7 @@ public class Consultation {
                 this.noConsultation = noConsultation;
                 this.date = date;
             } else {
-                System.out.println("Les identifiants des patients doivent être unique");
+                System.out.println("Les consulations doivent être unique");
             }
         } catch (Exception e) {
             e.printStackTrace();
