@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+
         Medicament medicament1 = new Medicament("XFO874", "Paracetamol");
         Medicament medicament2 = new Medicament("RFO874", "Acide acétylsalicylique");
         Medicament medicament3 = new Medicament("fFO874", "Morphine ");
@@ -68,9 +69,9 @@ public class Main {
         medecin3.makePrescription(consultation3, medoc3, 3);
 
         Manager manager = new Manager();
-        // System.out.println(patient1.getConsultations());
+        // System.out.println(patient1.getConsultations().get(0).getMedecin().getNom());
+        // manager.getPrescription(patient2);
         manager.getPrescription(patient2);
-        // manager.getPrescription(patient1);
         // System.out.println(Medecin.allPrescription);
         // consultation6.getPrescription();
         // System.out.println(Medecin.allPrescription);
