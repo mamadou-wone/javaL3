@@ -10,6 +10,7 @@ import java.util.ArrayList;
 //      \|____________|\|_______|\|__| \|__|\|_______|
 
 public class Main {
+
     public static void main(String[] args) {
 
         Medicament medicament1 = new Medicament("XFO874", "Paracetamol");
@@ -20,10 +21,10 @@ public class Main {
         Medicament medicament6 = new Medicament("ZFO874", "Sennosides ");
         Medicament medicament7 = new Medicament("YFO874", "Chloroquine ");
         Medicament medicament8 = new Medicament("PFO874", "Azathioprine ");
-        Medicament medicament9 = new Medicament("LFO874", "Cortisol");
-        Medicament medicament10 = new Medicament("AFO874", "Pénicillamine");
-        Medicament medicament11 = new Medicament("HFO874", "Diazépam ");
-        Medicament medicament12 = new Medicament("GFO874", "Praziquantel");
+        // Medicament medicament9 = new Medicament("LFO874", "Cortisol");
+        // Medicament medicament10 = new Medicament("AFO874", "Pénicillamine");
+        // Medicament medicament11 = new Medicament("HFO874", "Diazépam ");
+        // Medicament medicament12 = new Medicament("GFO874", "Praziquantel");
 
         Patient patient1 = new Patient(25486, "Moustapha DIOP");
         Patient patient2 = new Patient(68515, "Aminata GUEYE");
