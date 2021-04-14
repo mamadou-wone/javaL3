@@ -51,4 +51,5 @@ public class Patient {
     public void setConsultations(ArrayList<Consultation> consultations) {
         this.consultations = consultations;
     }
+
 }

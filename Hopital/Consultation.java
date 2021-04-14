@@ -13,6 +13,8 @@ public class Consultation {
     private LocalDate date;
     private Medecin medecin;
     private Patient patient;
+    public int count = 0;
+    public int count2 = 0;
     public static ArrayList<Integer> allID = new ArrayList<Integer>();
 
     public Consultation(int noConsultation, LocalDate date) {
@@ -44,7 +46,14 @@ public class Consultation {
     }
 
     public void setMedecin(Medecin medecin) {
-        this.medecin = medecin;
+        this.count += 1;
+        if (this.count == 1) {
+            this.medecin = medecin;
+        } else {
+            System.out.println("Le médecin " + medecin.getNom() + " ne peut pas refaire la consultation N°"
+                    + this.getNoConsultation());
+        }
+
     }
 
     public Patient getPatient() {
@@ -52,7 +61,14 @@ public class Consultation {
     }
 
     public void setPatient(Patient patient) {
-        this.patient = patient;
+        this.count2 += 1;
+        if (this.count2 == 1) {
+            this.patient = patient;
+        } else {
+            System.out.println("Le patient " + patient.getNom() + " ne peut pas refaire la consultation N°"
+                    + this.getNoConsultation());
+        }
+
     }
 
     public void getPrescription() {

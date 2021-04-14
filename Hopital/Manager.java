@@ -1,8 +1,22 @@
 import java.util.ArrayList;
 
 public class Manager {
+    public static ArrayList<String> allMedicaments = new ArrayList<String>();
 
-    public void getMedicament(ArrayList<Medicament> medicaments) {
+    public void getPatientInfo(Patient patient) {
+        System.out.println("Voici l'ensemble des consultations faites par le patient " + patient.getNom());
+        if (patient.getConsultations().size() != 0) {
+            for (Consultation consultaion : patient.getConsultations()) {
+                System.out.println("Consultation N° " + consultaion.getNoConsultation() + " du " + consultaion.getDate()
+                        + " avec le médecin " + consultaion.getMedecin().getNom());
+                System.out.println("***************************************************************");
+            }
+        } else {
+            System.out.println("Ce Patient n'as pas d'Historique de Consultation");
+        }
+    }
+
+    private void getMedicament(ArrayList<Medicament> medicaments) {
         for (Medicament medicament : medicaments) {
             System.out.println("-" + medicament.getLibelle());
         }
@@ -28,6 +42,17 @@ public class Manager {
                 // System.out.println("Aucune prescription faite à ce patient");
                 // }
             }
+        }
+    }
+
+    public void Statistique(Medicament medicament) {
+        if (medicament.getMedecin().size() != 0) {
+            System.out.println("Voici la liste des médecins qui ont prescrit le médicament " + medicament.getLibelle());
+            for (Medecin medecin : medicament.getMedecin()) {
+                System.out.println(medecin.getNom());
+            }
+        } else {
+            System.out.println("Le médicament " + medicament.getLibelle() + " n'apparait dans aucune prescription !");
         }
     }
 }

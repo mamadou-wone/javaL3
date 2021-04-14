@@ -54,6 +54,8 @@ public class Medecin {
         prescription.setNbPrises(nbPrises);
         for (Medicament medicament : medicaments) {
             prescription.getMedicaments().add(medicament);
+            medicament.getMedecin().add(this);
+            // Manager.allMedicaments.add(medicament.getLibelle());
         }
         allPrescription.add(prescription);
     }

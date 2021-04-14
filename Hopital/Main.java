@@ -48,9 +48,12 @@ public class Main {
         Medecin medecin4 = new Medecin("8493265", "Mouhamed TOURE");
 
         consultation1.setMedecin(medecin1);
+        // consultation1.setMedecin(medecin3);
         consultation1.setPatient(patient1);
-
-        consultation2.setMedecin(medecin2);
+        // consultation1.setPatient(patient2);
+        // System.out.println(consultation1.count);
+        // System.out.println(consultation1.getMedecin().getNom());
+        // consultation2.setMedecin(medecin2);
         consultation2.setPatient(patient2);
 
         consultation3.setMedecin(medecin3);
@@ -69,21 +72,19 @@ public class Main {
         medecin2.makePrescription(consultation2, medoc2, 3);
         medecin3.makePrescription(consultation3, medoc3, 3);
 
+        // System.out.println(patient1.getConsultations().size());
+
         Manager manager = new Manager();
-        // System.out.println(patient1.getConsultations().get(0).getMedecin().getNom());
-        // manager.getPrescription(patient2);
-        manager.getPrescription(patient2);
-        // System.out.println(Medecin.allPrescription);
-        // consultation6.getPrescription();
-        // System.out.println(Medecin.allPrescription);
-
-        // for (Medicament medocs : prescription1.getMedicaments()) {
-        // System.out.println(medocs.getLibelle());
-
+        // manager.Statistique(medicament3);
+        // manager.getPatientInfo(patient2);
+        // manager.getPrescription(patient1);
+        // for (String medicament : manager.allMedicaments) {
+        // System.out.println(medicament);
         // }
 
-        // for (Consultation consultation : patient1.getConsultations()) {
-        // System.out.println(consultation.getMedecin());
+        // for (Prescription prescription : Medecin.allPrescription) {
+        // System.out.println(prescription.getMedicaments());
         // }
+
     }
 }
