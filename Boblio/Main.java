@@ -47,7 +47,8 @@ public class Main {
         // System.out.println(Faculte.student_list.size());
         // facScience.getStudents();
         // facLettre.getStudents();
-        facSeg.getStudents();
+        // facSeg.showStudents();
+        facScience.showStudents();
 
     }
 }

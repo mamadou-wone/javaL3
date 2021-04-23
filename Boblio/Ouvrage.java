@@ -27,4 +27,8 @@ public class Ouvrage {
             System.out.println(auteur.getAuthor_name());
         }
     }
+
+    public String getNom_ouvrage() {
+        return nom_ouvrage;
+    }
 }

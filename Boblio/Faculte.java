@@ -14,20 +14,25 @@ public class Faculte {
         return faculte_name;
     }
 
-    public void getStudents() {
-        boolean isPresent = false;
+    public ArrayList<Etudiant> getStudents() {
+        ArrayList<Etudiant> allStudents = new ArrayList<>();
         for (Etudiant etudiant : student_list) {
             if (etudiant.getFaculte() == this) {
-                isPresent = true;
-                System.out.println(etudiant.getStudent_name());
-            } else {
-                isPresent = false;
+                // System.out.println(etudiant.getStudent_name());
+                allStudents.add(etudiant);
             }
         }
-        if (isPresent) {
-            System.out.println("Noooooo");
-        }
+        return allStudents;
+    }
 
+    public void showStudents() {
+        if (this.getStudents().size() != 0) {
+            for (Etudiant etudiant : this.getStudents()) {
+                System.out.println(etudiant.getStudent_name());
+            }
+        } else {
+            System.out.println("Cette étudiant n'est inscrit dans aucune faculté");
+        }
     }
 
 }
